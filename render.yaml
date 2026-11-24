@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sobracerca
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/salud
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@sobracerca.co
+      - key: ADMIN_PASSWORD
+        sync: false

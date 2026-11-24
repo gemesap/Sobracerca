@@ -1,0 +1,33 @@
+{
+  "name": "sobracerca",
+  "version": "1.0.0",
+  "description": "SobraCerca: plataforma para el aprovechamiento de excedentes alimentarios en pequeños comercios del barrio Marruecos (Bogotá D.C.). Prototipo del proyecto de grado UNAD.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev:server": "node --watch server/index.js",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "test": "node --test --test-reporter=spec tests/api.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.28.0",
+    "supertest": "^7.0.0",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
